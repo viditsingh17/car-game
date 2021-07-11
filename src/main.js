@@ -390,7 +390,7 @@ renderMap(cameraWidth * 2, cameraHeight * 2);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 // renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setSize(600, 600);
+renderer.setSize(window.innerWidth, window.innerWidth);
 renderer.shadowMap.enabled = true;
 // renderer.render(scene, camera);
 
@@ -476,14 +476,14 @@ window.addEventListener("keyup", (event) => {
 
 // handeling clicks
 const accelerateButton = document.getElementById("accelerate");
-const declarateButton = document.getElementById("declarate");
+const declerateButton = document.getElementById("declarate");
 const resetButton = document.getElementById("reset");
 accelerateButton.onmousedown = function () {
   startGame();
   accelerate = true;
   return;
 };
-declarateButton.onmousedown = function () {
+declerateButton.onmousedown = function () {
   decelerate = true;
   return;
 };
@@ -495,7 +495,25 @@ window.addEventListener("mouseup", (event) =>{
   accelerate = false;
   decelerate = false;
 });
-
+// Handle touch events
+accelerateButton.ontouchstart = function () {
+  startGame();
+  accelerate = true;
+  return;
+}
+accelerateButton.ontouchend = function () {
+  accelerate = false;
+}
+declerateButton.ontouchstart =  function () {
+  decelerate = true;
+}
+declerateButton.ontouchend = function() {
+  decelerate = false;
+}
+resetButton.ontouchend =  function () {
+  reset();
+}
+document.onlongpress = (event) => {}
 // add other otherVehicles
 function addVehicle() {
   const vehicleType = ["car"];
