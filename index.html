@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="./src/main.js"></script>
+    <script type="text/javascript" src="./src/script.js" defer></script>
+    <title>car game</title>
+</head>
+
+<body>
+    <div class="overlay" id="overlay">
+        <div class="center-box">
+            <div class="center-text">car game</div>
+            <div class="sub-text">followed tutorial: YouTube/HunorBorbely</div>
+            <div class="sub-text">created by: vidit singh brahmania</div>
+            <div class="line" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Crashed box start-->
+    <div class="crash-overlay" id="crash-overlay">
+        <div class="center-box">    
+            <div class="center-text" id="crashed-text">Crashed!</div>
+            <div class="button" id="reset"><span class="material-icons">refresh</span></div>
+            <div class="sub-text">Press R to reset/restart.</div>
+        </div>
+    </div>
+    <!-- Crashed box end -->
+    <div class="page-container">
+        <div class="dataElements">
+            <div class="score-element box">
+                <div>Laps</div>
+                <div id="score">0</div>
+            </div>
+            <div class="vehicle-element box">
+                <div>Vehicles</div>
+                <div id="vehicles">0</div>
+            </div>
+            <div class="distance-element box">
+                <div>Travelled</div>
+                <div id="travelled">0m</div>
+            </div>
+        </div>
+        <div class="vertical">
+            <div class="main-container" id="main">
+                <!-- Canvas comes here -->
+                <div class="right-container">
+                    <div class="controller-container">
+                        <div class="vertical centered">
+                            <div class="button" id="accelerate"><span class="material-icons">fast_forward</span></div>
+                            <div>Accelerate</div>
+                        </div>
+                        <div class="vertical centered">
+                            <div class="button" id="declarate"><span class="material-icons">fast_rewind</span></div>
+                            <div>Declarate</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <div class="instructions">
+                            <h2>Instructions</h2>
+                            <div class="sub-instructions">
+                                <ul>
+                                    <li>You control the <span style="color: #e74c3c">red </span>car on the left track</li>
+                                    <li>Other cars will move on the other track. Eventually the number of cars will increase.</li>
+                                    <li>Your objective is save your car from colliding with other cars and achieve greatest score(Laps) possibe.</li>
+                                    <li>Your controls for Desktop:
+                                        <ul>
+                                            <li><b>UP ARROW</b> : Accelerate</li>
+                                            <li><b>DOWN ARROW</b> : Declarate</li>
+                                            <li><b>R</b> : Reset/Restart game</li>
+                                        </ul>
+                                    </li>
+                                    <li>Press <b>UP ARROW</b>/<span style="color:#1abc9c">green</span> to start.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-container">
+                <div>Vidit Singh Brahmania</div>
+                <div class="inline">
+                    <a href="https://viditsingh17.github.io/portfolio_website/">Website</a>
+                    <a href="https://www.linkedin.com/in/vidit-singh-698434105/">LinkedIn</a>
+                    <a href="https://github.com/viditsingh17?tab=repositories">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
