@@ -421,7 +421,8 @@ function reset() {
   movePlayerCar(0);
   scoreElement.innerText = score.toString();
   lastTimeStamp = undefined;
-
+  distanceTravelled = 0;
+  
   // remove end game message
   const crashElement = document.getElementById("crash-overlay");
   crashElement.style.display = "none";
