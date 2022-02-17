@@ -1,4 +1,7 @@
 # car-game
+
+## To play the game
+https://viditsingh17.github.io/car-game/
 ## Gameplay
 
 A 3D car game that works in the browser. The game mechanic is very simple, you control the speed of a car moving on a circular track and there are cars moving on the other 
